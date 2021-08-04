@@ -5,15 +5,31 @@ import schema from "../validation/formSchema";
 import * as yup from "yup";
 
 
-const StyledForm = styled.form`
+const StyledHome = styled.div`
+height: 100vh;
 display: flex;
 flex-direction: column;
+justify-content: center;
+align-items: center;
+background: linear-gradient(to right top,
+    #396dbb, #0098df, 
+    #00becb, #00db84, 
+    #a8eb12);
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        width: 25%;
+        margin: auto;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+}
 
 button {
-    width: 25%;
-    margin: auto;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    width: 50px;
 }
 `
 
@@ -92,9 +108,9 @@ const StandardHome = (props) => {
     }
 
     return (
-        <div>
+        <StyledHome>
             <h1>Standard</h1>
-            <StyledForm onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Difficulty:&nbsp;
                     <select name='difficulty' onChange={handleChange} value={formValues.difficulty}>
@@ -177,14 +193,14 @@ const StandardHome = (props) => {
                     </select>
                 </label>
                 <button disabled={disabled}>Sart</button>
-            </StyledForm>
+            </form>
             <button onClick={()=>{props.setModeChoice('')}}>back</button>
             <div>
                 <div>{formErrors.difficulty}</div>
                 <div>{formErrors.category}</div>
                 <div>{formErrors.questions}</div>
             </div>
-        </div>
+        </StyledHome>
     )
 }
 

@@ -3,15 +3,37 @@ import styled from 'styled-components'
 import StandardHome from './StandardHome'
 
 const StyledDiv = styled.div`
+height: 100vh;
 display: flex;
 flex-direction: column;
+justify-content: center;
+background: linear-gradient(to right top,
+    #396dbb, #0098df, 
+    #00becb, #00db84, 
+    #a8eb12);
 
-button {
-    width: 25%;
-    height: 3vh;
-    margin: auto;
-    margin-top: 2%;
-    border-radius: 10px;
+.buttons {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        width: 25%;
+        height: 3vh;
+        margin: auto;
+        margin-top: 2%;
+        border-radius: 10px;
+        height: 45px;
+        &:hover {
+            background-color: lightgray;
+            border: 1px outset green;
+        }
+    }
+    .standard {
+        &:hover {
+            background-color: lightgreen;
+            border: 1px outset green;
+        }
+    }
 }
 `
 
@@ -23,19 +45,19 @@ const HomeScreen = (props) => {
     }
 
     return (
-        <div>
+        <StyledDiv>
             <h1>TRIVIA</h1>
             <h2>Slect Game Mode:</h2>
-            <StyledDiv>
-                <button name={'standard'} onClick={handleModeChoice}>Standard</button>
+            <div className='buttons'>
+                <button name={'standard'} onClick={handleModeChoice} className='standard'>Standard</button>
                 <button disabled={true} name={'blitz'} onClick={handleModeChoice}>Blitz</button>
                 <button disabled={true} name={'survival'} onClick={handleModeChoice}>Survival</button>
-            </StyledDiv>
-        </div>
+            </div>
+        </StyledDiv>
     )
 }
 
-
+// wip
 const BlitzScreen = (props) => {
     return (
         <div>
@@ -44,7 +66,7 @@ const BlitzScreen = (props) => {
         </div>
     )
 }
-
+// wip
 const SurvivalScreen = (props) => {
     return (
         <div>
