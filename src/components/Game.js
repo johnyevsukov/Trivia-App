@@ -35,6 +35,10 @@ const Game = (props) => {
     const [questionIndex, setQuestionIndex] = useState(0)
     const { questions } = props
 
+    const refresh = () => {
+        window.location.reload()
+    }
+
     const incrementIndex = () => {
         setQuestionIndex(questionIndex + 1)
     }
@@ -45,7 +49,7 @@ const Game = (props) => {
         return (
             <div>
                 <h2>You answered {numberCorrect} questions correctly out of {numberOfQuestions}.</h2>
-                <button>Home</button>
+                <button onClick={refresh}>Home</button>
             </div>
         )
     }
