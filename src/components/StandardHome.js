@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import useSound from 'use-sound';
+import beepSfx from '../sounds/beep.mp3';
+import beepSfxTwo from '../sounds/select.mp3';
 import styled from 'styled-components'
 import axios from 'axios'
 import schema from "../validation/formSchema";
@@ -84,6 +87,8 @@ const initialFormErrors = {
 const initialDisabled = true;
 
 const StandardHome = (props) => {
+    const [play] = useSound(beepSfx)
+    const [playTwo] = useSound(beepSfxTwo)
     const [formValues, setFormValues] = useState(initialFromValues)
     const [formErrors, setFormErrors] = useState(initialFormErrors);
     const [disabled, setDisabled] = useState(initialDisabled);
@@ -111,6 +116,7 @@ const StandardHome = (props) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target
+        playTwo()
         yup
           .reach(schema, name)
           .validate(value)
@@ -147,7 +153,7 @@ const StandardHome = (props) => {
         <StyledHome>
             <h1>Standard</h1>
             <form onSubmit={handleSubmit}>
-                <label>
+                <label onMouseOver={play}>
                     Difficulty:&nbsp;
                     <select name='difficulty' onChange={handleChange} value={formValues.difficulty}>
                         <option>-select-</option>
@@ -157,7 +163,7 @@ const StandardHome = (props) => {
                         <option value='mixed'>Mixed</option>
                     </select>
                 </label>
-                <label>
+                <label onMouseOver={play}>
                     <input
                     type='radio'
                     name='category'
@@ -167,7 +173,7 @@ const StandardHome = (props) => {
                     />
                     History
                 </label>
-                <label>
+                <label onMouseOver={play}>
                     <input
                     type='radio'
                     name='category'
@@ -177,7 +183,7 @@ const StandardHome = (props) => {
                     />
                     Geography
                 </label>
-                <label>
+                <label onMouseOver={play}>
                     <input
                     type='radio'
                     name='category'
@@ -187,7 +193,7 @@ const StandardHome = (props) => {
                     />
                     Sports
                 </label>
-                <label>
+                <label onMouseOver={play}>
                     <input
                     type='radio'
                     name='category'
@@ -197,7 +203,7 @@ const StandardHome = (props) => {
                     />
                     Film
                 </label>
-                <label>
+                <label onMouseOver={play}>
                     <input
                     type='radio'
                     name='category'
@@ -207,7 +213,7 @@ const StandardHome = (props) => {
                     />
                     Music
                 </label>
-                <label>
+                <label onMouseOver={play}>
                     <input
                     type='radio'
                     name='category'
@@ -217,7 +223,7 @@ const StandardHome = (props) => {
                     />
                     Mixed
                 </label>
-                <label>
+                <label onMouseOver={play}>
                     Number of Qs:&nbsp;
                     <select name='questions' onChange={handleChange} value={formValues.questions}>
                         <option>-select-</option>
