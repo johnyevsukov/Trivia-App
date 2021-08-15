@@ -11,6 +11,7 @@ button {
 }
 
 label {
+    margin-top: .5rem;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
