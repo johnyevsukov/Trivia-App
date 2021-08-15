@@ -1,4 +1,41 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
+
+const StyledFrom = styled.div`
+
+display: flex;
+flex-direction: column;
+
+button {
+    font-family: 'ArcadeClassic', sans-serif;
+    font-size: 1rem;
+}
+
+label {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    &:hover {
+        color: lightgreen;
+    }
+}
+
+.answer {
+    margin-top: .5rem;
+    font-size: 1.9rem;
+}
+
+.correct {
+    color: lightgreen;
+    text-shadow: 2px 2px 5px lightgreen;
+}
+
+.incorrect {
+    color: red;
+    text-shadow: 4px 4px 7px red;
+    -webkit-text-stroke: .3px black;
+}
+`
 
 const QuestionCard = (props) => {
     const [formValue, setFormValue] = useState()
@@ -28,7 +65,7 @@ const QuestionCard = (props) => {
     }
 
     return (
-        <div>
+        <StyledFrom>
             <h2 dangerouslySetInnerHTML={{__html:question.question}}></h2> {/* The quiz API spits out html entities in certain questions */}
             <form onSubmit={handleSubmit}>
                 {question.choices.map(choice => {
@@ -48,8 +85,8 @@ const QuestionCard = (props) => {
                 })}
                 <button>{answered ? 'Next Question' : 'Submit Answer'}</button>
             </form>
-            {answered && (formValue === question.correct ? <p>Correct!</p> : <p>Wrong! correct answer: {question.correct}</p>)}
-        </div>
+            {answered && (formValue === question.correct ? <p className='answer correct'>Correct!</p> : <p className='answer incorrect'>Wrong! correct answer: {question.correct}</p>)}
+        </StyledFrom>
     )
 }
 

@@ -6,6 +6,7 @@ import * as yup from "yup";
 
 
 const StyledHome = styled.div`
+font-family: 'ArcadeClassic', sans-serif;
 height: 100vh;
 display: flex;
 flex-direction: column;
@@ -16,20 +17,55 @@ background: linear-gradient(to right top,
     #00becb, #00db84, 
     #a8eb12);
 
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 1rem;
+    letter-spacing: 7px;
+    background: linear-gradient(to right, #FFF 20%, #03fc4a 40%, #03fc4a 60%, #FFF 80%);
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    @keyframes shine {
+        to {
+        background-position: 200% center;
+        }
+    }
+}
+
+select {
+    font-family: 'ArcadeClassic', sans-serif;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
 form {
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
 
     button {
-        width: 25%;
+        width: 40%;
         margin: auto;
         margin-top: 1%;
         margin-bottom: 1%;
     }
 }
 
+label {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    &:hover {
+        color: lightgreen;
+    }
+}
+
 button {
-    width: 50px;
+    font-family: 'ArcadeClassic', sans-serif;
 }
 `
 
@@ -192,7 +228,7 @@ const StandardHome = (props) => {
                         <option value='30'>30</option>
                     </select>
                 </label>
-                <button disabled={disabled}>Sart</button>
+                <button disabled={disabled}>Start</button>
             </form>
             <button onClick={()=>{props.setModeChoice('')}}>back</button>
             <div>

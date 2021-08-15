@@ -3,6 +3,7 @@ import QuestionCard from './QuestionCard';
 import styled from 'styled-components'
 
 const StyledGame = styled.div`
+font-family: 'ArcadeClassic', sans-serif;
 height: 100vh;
 display: flex;
 flex-direction: column;
@@ -13,9 +14,37 @@ background: linear-gradient(to right top,
     #00becb, #00db84, 
     #a8eb12);
 
+h2 {
+    font-family: 'ArcadeClassic', sans-serif;
+    letter-spacing: 3px;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.question {
+    letter-spacing: 5px;
+    font-size: 3rem;
+    font-family: 'ArcadeClassic', sans-serif;
+    background: linear-gradient(to right, #FFF 20%, #03fc4a 40%, #03fc4a 60%, #FFF 80%);
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    @keyframes shine {
+        to {
+        background-position: 200% center;
+        }
+    }
+}
+
 form {
     display: flex;
     flex-direction: column;
+    font-size: 2rem;
+    font-family: 'ArcadeClassic', sans-serif;
+    letter-spacing: 2px;
 
     button {
         width: 25%;
@@ -27,6 +56,12 @@ form {
 
 button {
     width: 50px;
+}
+
+.home {
+    font-family: 'ArcadeClassic', sans-serif;
+    width: 6rem;
+    font-size: 1.2rem;
 }
 `
 
@@ -49,7 +84,7 @@ const Game = (props) => {
         return (
             <div>
                 <h2>You answered {numberCorrect} questions correctly out of {numberOfQuestions}.</h2>
-                <button onClick={refresh}>Home</button>
+                <button className='home' onClick={refresh}>Home</button>
             </div>
         )
     }
@@ -58,8 +93,8 @@ const Game = (props) => {
 
     return (
         <StyledGame>
-            {questionIndex < questions.length ? <h2>Question {questionIndex + 1}/{questions.length}</h2> : <h2>Results:</h2>}
-            {questionIndex < questions.length ? <QuestionCard question={questions[questionIndex]} incrementIndex={incrementIndex} setScore={setScore} score={score}/> : <p>{calculateScore()}</p>}
+            {questionIndex < questions.length ? <h2 className='question'>Question {questionIndex + 1}/{questions.length}</h2> : <h2>Results:</h2>}
+            {questionIndex < questions.length ? <QuestionCard question={questions[questionIndex]} incrementIndex={incrementIndex} setScore={setScore} score={score}/> : calculateScore()}
         </StyledGame>
     )
 }

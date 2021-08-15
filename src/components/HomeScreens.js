@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import StandardHome from './StandardHome'
 
 const StyledDiv = styled.div`
+font-family: 'ArcadeClassic', sans-serif;
 height: 100vh;
 display: flex;
 flex-direction: column;
@@ -11,6 +12,31 @@ background: linear-gradient(to right top,
     #396dbb, #0098df, 
     #00becb, #00db84, 
     #a8eb12);
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 1rem;
+    letter-spacing: 7px;
+    background: linear-gradient(to right, #FFF 20%, black 40%, black 60%, #FFF 80%);
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 7px;
+    margin: 0;
+}
 
 .buttons {
     display: flex;
@@ -23,15 +49,18 @@ background: linear-gradient(to right top,
         margin-top: 2%;
         border-radius: 10px;
         height: 45px;
+        font-family: 'ArcadeClassic', sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 4px;
         &:hover {
             background-color: lightgray;
-            border: 1px outset green;
         }
     }
     .standard {
         &:hover {
             background-color: lightgreen;
             border: 1px outset green;
+            box-shadow: 0 10px 30px lightgreen;
         }
     }
 }
