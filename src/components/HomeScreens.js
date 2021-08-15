@@ -76,7 +76,7 @@ const HomeScreen = (props) => {
     return (
         <StyledDiv>
             <h1>TRIVIA</h1>
-            <h2>Slect Game Mode:</h2>
+            <h2>Select Game Mode:</h2>
             <div className='buttons'>
                 <button name={'standard'} onClick={handleModeChoice} className='standard'>Standard</button>
                 <button disabled={true} name={'blitz'} onClick={handleModeChoice}>Blitz</button>
