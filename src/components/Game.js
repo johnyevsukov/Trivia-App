@@ -3,7 +3,7 @@ import QuestionCard from './QuestionCard';
 import styled from 'styled-components'
 
 const StyledGame = styled.div`
-font-family: 'ArcadeClassic', sans-serif;
+font-family: 'Press Start 2P';
 height: 100vh;
 display: flex;
 flex-direction: column;
@@ -15,16 +15,17 @@ background: linear-gradient(to right top,
     #a8eb12);
 
 h2 {
-    font-family: 'ArcadeClassic', sans-serif;
-    letter-spacing: 3px;
+    font-family: 'Press Start 2P';
+    letter-spacing: 1.5px;
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    width: 40ch;
 }
 
 .question {
     letter-spacing: 5px;
     font-size: 3rem;
-    font-family: 'ArcadeClassic', sans-serif;
+    font-family: 'Press Start 2P';
     background: linear-gradient(to right, #FFF 20%, #03fc4a 40%, #03fc4a 60%, #FFF 80%);
     background-size: 200% auto;
     background-clip: text;
@@ -43,7 +44,7 @@ form {
     display: flex;
     flex-direction: column;
     font-size: 2rem;
-    font-family: 'ArcadeClassic', sans-serif;
+    font-family: 'Press Start 2P';
     letter-spacing: 2px;
 
     button {
@@ -59,7 +60,7 @@ button {
 }
 
 .home {
-    font-family: 'ArcadeClassic', sans-serif;
+    font-family: 'Press Start 2P';
     width: 6rem;
     font-size: 1.2rem;
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import StandardHome from './StandardHome'
 
 const StyledDiv = styled.div`
-font-family: 'ArcadeClassic', sans-serif;
+font-family: 'Press Start 2P';
 height: 100vh;
 display: flex;
 flex-direction: column;
@@ -49,7 +49,7 @@ h2 {
         margin-top: 2%;
         border-radius: 10px;
         height: 45px;
-        font-family: 'ArcadeClassic', sans-serif;
+        font-family: 'Press Start 2P';
         font-size: 1.5rem;
         letter-spacing: 4px;
         &:hover {

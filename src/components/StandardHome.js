@@ -6,7 +6,7 @@ import * as yup from "yup";
 
 
 const StyledHome = styled.div`
-font-family: 'ArcadeClassic', sans-serif;
+font-family: 'Press Start 2P';
 height: 100vh;
 display: flex;
 flex-direction: column;
@@ -37,7 +37,7 @@ h1 {
 }
 
 select {
-    font-family: 'ArcadeClassic', sans-serif;
+    font-family: 'Press Start 2P';
     font-size: 1rem;
     border-radius: 10px;
 }
@@ -65,7 +65,7 @@ label {
 }
 
 button {
-    font-family: 'ArcadeClassic', sans-serif;
+    font-family: 'Press Start 2P';
 }
 `
 

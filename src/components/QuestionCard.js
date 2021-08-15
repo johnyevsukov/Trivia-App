@@ -2,17 +2,16 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const StyledFrom = styled.div`
-
 display: flex;
 flex-direction: column;
 
 button {
-    font-family: 'ArcadeClassic', sans-serif;
+    font-family: 'Press Start 2P';
     font-size: 1rem;
 }
 
 label {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     &:hover {
