@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import HomeScreens from './components/HomeScreens'
 import Game from './components/Game'
+import Setup from './components/Setup'
 import './App.css';
 
 function App() {
-  const [modeChoice, setModeChoice] = useState('')
-  const [ questions, setQuestions ] = useState('')
+  const [questions, setQuestions] = useState('')
 
-
+  /* shuffle function for randomizing answer
+  choices from the API --otherwise the correct
+  answer will always be the last choice-- */
   const shuffleArray = (array) => {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -15,27 +16,34 @@ function App() {
         array[i] = array[j];
         array[j] = temp;
     }
-}
+  }
 
-  const sortQuestions = (questionsArray) => {
-    const sortedQuestions = questionsArray.map((question, indx) => {
+  /* reorganize the data set from the API. Creates a
+  new list of question objects with an id, answer choice
+  set, correct answer, and the question itself.
+  Then sets questions, which begins the game */
+  const initializeGame = (questions) => {
+    const reorganizedQuestions = questions.map((question, i) => {
       const choices = question.incorrect_answers
       choices.push(question.correct_answer)
       shuffleArray(choices)
       return {
-        id: indx,
+        id: i,
         question: question.question, 
         correct: question.correct_answer, 
-        choices: choices}
-    })
-    setQuestions(sortedQuestions)
-    console.log(questions)
+        choices: choices
+        }
+      })
+    setQuestions(reorganizedQuestions)
   }
 
-
+  /* have questions been set? If yes, start the game.
+  If no, stay on setup (home screen and settings) */
   return (
-    <div className="App">
-      {questions ? <Game questions={questions}/> : <HomeScreens modeChoice={modeChoice} setModeChoice={setModeChoice} sort={sortQuestions} setQuestions={setQuestions}/>}
+    <div className='app'>
+      {
+        questions ? <Game questions={questions}/> : <Setup initializeGame={initializeGame}/>
+      }
     </div>
   );
 }
