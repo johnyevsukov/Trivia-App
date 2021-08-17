@@ -7,7 +7,6 @@ import axios from 'axios'
 import schema from "../validation/formSchema";
 import * as yup from "yup";
 
-
 const StyledHome = styled.div`
 font-family: 'Press Start 2P';
 height: 100vh;
