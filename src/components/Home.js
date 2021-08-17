@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import useSound from 'use-sound';
 import popSfx from '../sounds/pop.mp3';
+import github from '../github.png';
 
 const StyledHome = styled.div`
 height: 100vh;
@@ -19,6 +20,25 @@ height: 100vh;
     #00cfff, #00e3ff, #00edfc,
     #00f6f7, #09ffef, #00ffdd,
     #00ffc7, #00ffac, #29ff8e);
+}
+
+img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    &:hover {
+        transform: rotate(360deg);
+        background: lightgreen;
+        color: white;
+        box-shadow:
+        0 0 15px 7px #fff,  /* inner white */
+        0 0 25px 15px lightgreen,
+        0 0 35px 22px lightgreen;
+    }
+    }
 }
 
 h1 {
@@ -72,6 +92,9 @@ const Home = (props) => {
             <div className='wrapper'>
                 <h1>TRIVIA</h1>
                 <button onClick={goToSettings}>START</button>
+                <a href='https://github.com/johnyevsukov/Trivia-App' target="_blank" rel="noopener noreferrer">
+                    <img src={github} alt='github'/>
+                </a>
             </div>
         </StyledHome>
     )
