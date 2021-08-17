@@ -4,7 +4,7 @@ import Results from './Results'
 
 const Game = (props) => {
     const [score, setScore] = useState([])
-    const [questionNumber, setQuestionNumber] = useState(1)
+    const [questionNumber, setQuestionNumber] = useState(0)
     const { questions } = props
     const totalQuestions = questions.length
 
