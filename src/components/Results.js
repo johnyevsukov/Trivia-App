@@ -25,6 +25,7 @@ h1 {
 }
 
 button {
+    cursor: pointer;
     font-family: 'Press Start 2P';
     width: 250px;
     height: 40px;
@@ -38,6 +39,15 @@ button {
         0 0 10px 5px #fff,  /* inner white */
         0 0 16.5px 10px lightgreen,
         0 0 23px 15px lightgreen;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+        width: 10ch;
     }
 }
 `

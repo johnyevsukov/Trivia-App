@@ -26,6 +26,7 @@ linear-gradient(to right top,
 }
 
 .category-choice {
+    cursor: pointer;
     font-size: 1.5rem;
     &:hover {
         transform: scale(1.1);
@@ -55,6 +56,7 @@ select {
     margin: auto;
     padding: .2rem;
     margin-top: .2rem;
+    cursor: pointer;
 }
 
 h1 {
@@ -99,8 +101,37 @@ button {
     height: 25px;
     transition: 0.2s ease-in-out;
     border: 1px solid black;
+    cursor: pointer;
     &:hover {
         transform: scale(1.1);
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .difficulty {
+        font-size: 1.4rem;
+        flex-direction: column;
+    }
+    
+    .questions {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    h3 {
+        margin-bottom: .5rem;
+        margin-top: .2rem;
+        font-size: 1.4rem;
+    }
+
+    .category-choice {
+        font-size: 1.2rem;
     }
 }
 `

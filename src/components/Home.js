@@ -66,6 +66,7 @@ button {
     width: 200px;
     height: 40px;
     transition: 0.2s ease-in-out;
+    cursor: pointer;
     &:hover {
         background: lightgreen;
         transform: scale(1.1);
@@ -74,6 +75,13 @@ button {
         0 0 30px 15px #fff,  /* inner white */
         0 0 50px 30px lightgreen,
         0 0 70px 45px lightgreen;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
     }
 }
 `

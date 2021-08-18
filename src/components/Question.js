@@ -29,6 +29,7 @@ height: 100vh;
 }
 
 .submit-button {
+    cursor: pointer;
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-family: 'Press Start 2P';
@@ -82,6 +83,7 @@ form {
 }
 
 label {
+    cursor: pointer;
     font-size: 1.4rem;
     margin-bottom: .3rem;
 }
@@ -109,6 +111,25 @@ h2 {
     margin-bottom: 2rem;
     width: 45ch;
     text-align: center;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        width: 25ch;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        font-size: 1.2rem;
+        margin-bottom: .1rem;
+    }
 }
 `
 
