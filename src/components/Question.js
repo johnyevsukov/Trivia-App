@@ -50,19 +50,19 @@ height: 100vh;
 .correct {
     font-size: 2rem;
     font-family: 'Press Start 2P';
-    color: lightgreen;
-    text-shadow: 4px 4px 10px lightgreen;
-    -webkit-text-stroke: .5px black;
+    color: #42ff42;
+    text-shadow: 1px 1px 25px #42ff42;
+    -webkit-text-stroke: 1.2px black;
 }
 
 .incorrect {
     text-align: center;
     font-size: 1.4rem;
-    line-height: 1.2;
+    line-height: 1.3;
     font-family: 'Press Start 2P';
     color: red;
-    text-shadow: 4px 4px 7px red;
-    -webkit-text-stroke: .9px white;
+    text-shadow: 2px 2px 7px red;
+    -webkit-text-stroke: 1.2px white;
 }
 
 .choice-option {
