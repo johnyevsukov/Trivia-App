@@ -91,6 +91,10 @@ button {
     h1 {
         font-size: 2.5rem;
     }
+
+    button {
+        background-color: white;
+    }
 }
 `
 
