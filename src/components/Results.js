@@ -55,6 +55,10 @@ button {
         margin-bottom: 1.2rem;
         width: 10ch;
     }
+
+    button {
+        background-color: white;
+    }
 }
 `
 

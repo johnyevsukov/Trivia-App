@@ -140,6 +140,10 @@ button {
         font-size: 1.4rem;
     }
 
+    button {
+        background-color: white;
+    }
+
     .category-choice {
         font-size: 1.2rem;
     }

@@ -137,6 +137,10 @@ h2 {
         font-size: 1.2rem;
         margin-bottom: .1rem;
     }
+
+    button {
+        background-color: white;
+    }
 }
 `
 
