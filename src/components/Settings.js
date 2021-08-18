@@ -28,6 +28,7 @@ linear-gradient(to right top,
 .category-choice {
     cursor: pointer;
     font-size: 1.5rem;
+    display: flex;
 }
 
 .difficulty {
@@ -247,6 +248,26 @@ const Settings = (props) => {
                 </label>
                 <h3>Category:</h3>
                 <div className='category-container'>
+                    <label className='category-choice' onMouseOver={beep}>
+                        <input
+                        type='radio'
+                        name='category'
+                        value='18'
+                        checked={formValues.category === '18'}
+                        onChange={handleChange}
+                        />
+                        Computer Science
+                    </label>
+                    <label className='category-choice' onMouseOver={beep}>
+                        <input
+                        type='radio'
+                        name='category'
+                        value='15'
+                        checked={formValues.category === '15'}
+                        onChange={handleChange}
+                        />
+                        Video Games
+                    </label>
                     <label className='category-choice' onMouseOver={beep}>
                         <input
                         type='radio'

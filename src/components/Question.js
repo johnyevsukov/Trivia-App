@@ -65,6 +65,7 @@ form {
 }
 
 label {
+    display: flex;
     cursor: pointer;
     font-size: 1.4rem;
     margin-bottom: .3rem;
