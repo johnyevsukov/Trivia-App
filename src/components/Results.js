@@ -31,14 +31,20 @@ button {
     height: 40px;
     transition: 0.2s ease-in-out;
     border-radius: 5px;
-    &:hover {
-        background: lightgreen;
-        transform: scale(1.1);
-        color: white;
-        box-shadow:
-        0 0 10px 5px #fff,  /* inner white */
-        0 0 16.5px 10px lightgreen,
-        0 0 23px 15px lightgreen;
+}
+
+/* desktop only */
+@media (min-width: 820px) {
+    button {
+        &:hover {
+            background: lightgreen;
+            transform: scale(1.1);
+            color: white;
+            box-shadow:
+            0 0 10px 5px #fff,  /* inner white */
+            0 0 16.5px 10px lightgreen,
+            0 0 23px 15px lightgreen;
+        }
     }
 }
 

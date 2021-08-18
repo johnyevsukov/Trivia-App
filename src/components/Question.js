@@ -37,15 +37,6 @@ height: 100vh;
     height: 40px;
     transition: 0.2s ease-in-out;
     border-radius: 5px;
-    &:hover {
-        background: lightgreen;
-        transform: scale(1.1);
-        color: white;
-        box-shadow:
-        0 0 10px 5px #fff,  /* inner white */
-        0 0 16.5px 10px lightgreen,
-        0 0 23px 15px lightgreen;
-    }
 }
 
 .correct {
@@ -64,15 +55,6 @@ height: 100vh;
     color: red;
     text-shadow: 2px 2px 7px red;
     -webkit-text-stroke: 1.2px white;
-}
-
-.choice-option {
-    &:hover {
-        transform: scale(1.3);
-        color: lightgreen;
-        text-shadow: 4px 4px 7px green;
-        -webkit-text-stroke: .9px black;
-    }
 }
 
 form {
@@ -111,6 +93,30 @@ h2 {
     margin-bottom: 2rem;
     width: 45ch;
     text-align: center;
+}
+
+/* desktop only */
+@media (min-width: 820px) {
+    .submit-button {
+        &:hover {
+            background: lightgreen;
+            transform: scale(1.1);
+            color: white;
+            box-shadow:
+            0 0 10px 5px #fff,  /* inner white */
+            0 0 16.5px 10px lightgreen,
+            0 0 23px 15px lightgreen;
+        }
+    }
+
+    .choice-option {
+        &:hover {
+            transform: scale(1.3);
+            color: lightgreen;
+            text-shadow: 4px 4px 7px green;
+            -webkit-text-stroke: .9px black;
+        }
+    }
 }
 
 /* mobile */

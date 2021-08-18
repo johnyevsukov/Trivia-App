@@ -29,16 +29,6 @@ img {
     margin-top: 2rem;
     cursor: pointer;
     transition: .5s ease-in-out;
-    &:hover {
-        transform: rotate(360deg);
-        background: lightgreen;
-        color: white;
-        box-shadow:
-        0 0 15px 7px #fff,  /* inner white */
-        0 0 25px 15px lightgreen,
-        0 0 35px 22px lightgreen;
-    }
-    }
 }
 
 h1 {
@@ -67,14 +57,32 @@ button {
     height: 40px;
     transition: 0.2s ease-in-out;
     cursor: pointer;
-    &:hover {
-        background: lightgreen;
-        transform: scale(1.1);
-        color: white;
-        box-shadow:
-        0 0 30px 15px #fff,  /* inner white */
-        0 0 50px 30px lightgreen,
-        0 0 70px 45px lightgreen;
+}
+
+/* desktop only */
+@media (min-width: 820px) {
+    img {
+        &:hover {
+            transform: rotate(360deg);
+            background: lightgreen;
+            color: white;
+            box-shadow:
+            0 0 15px 7px #fff,  /* inner white */
+            0 0 25px 15px lightgreen,
+            0 0 35px 22px lightgreen;
+        }
+    }
+    
+    button {
+        &:hover {
+            background: lightgreen;
+            transform: scale(1.1);
+            color: white;
+            box-shadow:
+            0 0 30px 15px #fff,  /* inner white */
+            0 0 50px 30px lightgreen,
+            0 0 70px 45px lightgreen;
+        }
     }
 }
 

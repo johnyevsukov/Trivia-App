@@ -28,12 +28,6 @@ linear-gradient(to right top,
 .category-choice {
     cursor: pointer;
     font-size: 1.5rem;
-    &:hover {
-        transform: scale(1.1);
-        color: lightgreen;
-        text-shadow: 4px 4px 7px green;
-        -webkit-text-stroke: .3px white;
-    }
 }
 
 .difficulty {
@@ -102,8 +96,23 @@ button {
     transition: 0.2s ease-in-out;
     border: 1px solid black;
     cursor: pointer;
-    &:hover {
-        transform: scale(1.1);
+}
+
+/* desktop only */
+@media (min-width: 820px) {
+    .category-choice {
+        &:hover {
+            transform: scale(1.1);
+            color: lightgreen;
+            text-shadow: 4px 4px 7px green;
+            -webkit-text-stroke: .3px white;
+        }
+    }
+
+    button {
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
