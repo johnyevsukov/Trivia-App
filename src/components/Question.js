@@ -191,7 +191,8 @@ const Question = (props) => {
                 onChange={handleChange}
                 disabled={isAnswered}
                 />
-                {choice}
+                {/* dangerouslySetInnerHTML due to the API's use of html entities */}
+                <span dangerouslySetInnerHTML={{__html:choice}}></span>
             </label>
         )
     }
@@ -200,7 +201,7 @@ const Question = (props) => {
         <StyledQuestion>
             <div className='wrapper'>
                 <h1>Question {questionNumber + 1}/{questions}</h1>
-                {/* dangerouslySetInnerHTML as a quick solution to the API's use of html entities */}
+                {/* dangerouslySetInnerHTML due to the API's use of html entities */}
                 <h2 dangerouslySetInnerHTML={{__html:question.question}}></h2>
                 <form onSubmit={handleSubmit}>
                     <div className='choice-container'>
